@@ -1,0 +1,20 @@
+block variables-header
+  - var sectionSubtitle       = 'видео'
+  - var sectionTitle = 'video'
+  - var className = 'video'
+  - var pic = 'title-video'
+
+//begin video
+#video.video.color-section(data-color='#ffffff')
+  include section-header
+  .container
+    .video-block
+      .video-block__play
+        a(data-fancybox="video" href="https://www.youtube.com/watch?v=G8lVXBN8ZFk").video-block__play-btn
+          +svg('play')
+        span.video-block__play-time 1 мин 50 сек
+
+      a(href="gallery.rar").btn.video__btn
+        +svg('download')
+        span скачать видео
+//end video

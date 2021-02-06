@@ -1,0 +1,65 @@
+block variables-header
+  - var sectionSubtitle       = 'Дресс код'
+  - var sectionTitle = 'Timetable'
+  - var className = 'dress'
+  - var pic = 'title-dress'
+
+//begin dress
+#dress.dress.color-section(data-color='#F5F4DE')
+  include section-header
+  .container
+    //begin dress__table
+    .dress-table
+      //begin dress-table__left
+      .dress-table__left
+        .dress-table__header-item
+          span мужчины
+        .dress-table__body-item
+          span.dress-table__body-text Светлые рубашки и темные брюки, костюмы в цветовой гамме свадьбы
+          a(data-fancybox="clothes-man" href="assets/img/clothes/man/01.jpeg").dress-table__body-link
+            +svg('camera')
+            span смотреть примеры
+          a(data-fancybox="clothes-man" href="assets/img/clothes/man/02.jpeg")
+          a(data-fancybox="clothes-man" href="assets/img/clothes/man/03.jpeg")
+          a(data-fancybox="clothes-man" href="assets/img/clothes/man/04.jpeg")
+          a(data-fancybox="clothes-man" href="assets/img/clothes/man/05.jpeg")
+      //end dress-table__left
+
+      //begin dress-table__right
+      .dress-table__right
+        .dress-table__header-item
+          span женщины
+        .dress-table__body-item
+          span.dress-table__body-text Платья и элегантные брючные костюмы в цветах свадьбы
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/01.jpeg").dress-table__body-link
+            +svg('camera')
+            span смотреть примеры
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/02.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/03.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/04.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/05.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/06.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/07.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/08.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/09.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/10.jpeg")
+          a(data-fancybox="clothes-woman" href="assets/img/clothes/woman/11.jpeg")
+      //end dress-table__right
+    //end dress__table
+
+    //begin dress__stop
+    .dress__stop
+      span СТОП - цвет черный
+    //end dress__stop
+
+    //begin dress__colors
+    .dress__colors
+      img(src="assets/img/colors.png" alt="colors")
+    //end dress__colors
+
+    //begin dress__ps
+    .dress__ps
+      span Учитывайте пожалуйста, что свадебная церемония будет проходить на открытой площадке в сосновом лесу — около 30 минут
+      span Свадебный ужин пройдет в главном ресторане отеля
+    //end dress__ps
+//end dress

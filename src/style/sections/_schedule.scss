@@ -1,0 +1,73 @@
+.schedule {
+  padding-bottom: 80px;
+
+  @include max(1200) {
+    padding-bottom: 0;
+  }
+}
+
+.schedule__item {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @include max(680) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    height: 1px;
+    content: '';
+    background-color: rgba(128, 157, 116, .15);
+  }
+  &:last-child {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.schedule__row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.schedule__row-item {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #141414;
+  &:first-child {
+    width: calc(50% - 100px);
+    color: $brand;
+
+    @include max(680) {
+      width: 100%;
+    }
+  }
+  &:nth-child(2) {
+    font-size: 20px;
+    width: 100px;
+
+    @include max(680) {
+      font-size: 16px;
+      width: 70px;
+    }
+  }
+  &:last-child {
+    width: 50%;
+
+    @include max(680) {
+      width: calc(100% - 75px);
+    }
+  }
+}

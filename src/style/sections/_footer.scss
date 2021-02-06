@@ -1,0 +1,142 @@
+.footer-contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 260px;
+
+  @include max(980) {
+    padding-bottom: 150px;
+  }
+  @include max(680) {
+    padding-bottom: 100px;
+  }
+}
+
+.footer-contact__name {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 24px;
+  margin-bottom: 17px;
+  text-align: center;
+  letter-spacing: .1em;
+}
+
+.footer-contact__phone {
+  font-weight: normal;
+  line-height: 46px;
+  margin-bottom: 26px;
+  padding-bottom: 23px;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: .05em;
+  border-bottom: 1px dashed #000;
+
+  @include responsive-font(38, 28);
+}
+
+.footer-contact__descr {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 19px;
+  margin-bottom: 21px;
+  text-align: center;
+  letter-spacing: .05em;
+}
+
+.footer-contact__social {
+  display: flex;
+
+  @include max(980) {
+    margin-bottom: 24px;
+  }
+}
+
+.footer-contact__social-link {
+  display: block;
+  margin: 0 5px;
+  img {
+    display: block;
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+.footer-contact__social-link--desktop {
+  @include max(1050) {
+    display: none;
+  }
+}
+
+.footer-contact__social-link--mobile {
+  display: none;
+
+  @include max(1050) {
+    display: block;
+  }
+}
+
+.footer-contact__tooltip {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 18px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 13px 0;
+  text-align: center;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+
+  @include max(980) {
+    position: static;
+    margin-bottom: 10px;
+  }
+}
+
+.footer-contact__tooltip--01 {
+  top: 170px;
+  left: 0;
+  width: 215px;
+  height: 60px;
+  padding-right: 10px;
+  background-image: url('../img/tooltip-01.svg');
+}
+
+.footer-contact__tooltip--02 {
+  top: 300px;
+  left: 140px;
+  width: 260px;
+  height: 46px;
+  padding-right: 10px;
+  background-image: url('../img/tooltip-02.svg');
+}
+
+.footer-contact__tooltip--03 {
+  top: 300px;
+  right: 240px;
+  width: 150px;
+  height: 50px;
+  padding-left: 10px;
+  background-image: url('../img/tooltip-03.svg');
+}
+
+.footer-contact__tooltip--04 {
+  top: 170px;
+  right: 0;
+  width: 220px;
+  height: 46px;
+  padding-left: 10px;
+  background-image: url('../img/tooltip-04.svg');
+}

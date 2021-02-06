@@ -1,0 +1,46 @@
+block variables-header
+  - var sectionSubtitle       = 'программа'
+  - var sectionTitle = 'Timetable'
+  - var className = 'schedule'
+  - var pic = 'title-schedule'
+
+//begin schedule
+#schedule.schedule.color-section(data-color='#F5F4DE')
+  include section-header
+  .container
+    .schedule__table
+      .schedule__item
+        .schedule__row
+          .schedule__row-item 01.04.2021
+          .schedule__row-item 13:00 -
+          .schedule__row-item заселение в номера для тех, кто решит остаться
+        .schedule__row
+          .schedule__row-item
+          .schedule__row-item 15:00 -
+          .schedule__row-item начало торжества
+        .schedule__row.schedule__row--main
+          .schedule__row-item
+          .schedule__row-item 16:00 -
+          .schedule__row-item свадебная церемония
+        .schedule__row
+          .schedule__row-item
+          .schedule__row-item 17:00 -
+          .schedule__row-item свадебный ужин
+        .schedule__row
+          .schedule__row-item
+          .schedule__row-item 22:00 -
+          .schedule__row-item торт
+        .schedule__row
+          .schedule__row-item
+          .schedule__row-item 23:00 -
+          .schedule__row-item танцы до утра
+      .schedule__item
+        .schedule__row
+          .schedule__row-item 02.04.2021
+          .schedule__row-item 11:00 -
+          .schedule__row-item сбор на уху в Panorama Hall
+        .schedule__row
+          .schedule__row-item
+          .schedule__row-item 12:00 -
+          .schedule__row-item выселение из номеров
+//end schedule

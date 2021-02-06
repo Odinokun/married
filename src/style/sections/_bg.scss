@@ -1,0 +1,39 @@
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  transition: background-color .8s;
+  background-color: #fff;
+  &::before,
+  &::after {
+    position: absolute;
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    content: '';
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include max(1024) {
+      width: 250px;
+    }
+    @include max(680) {
+      width: 200px;
+    }
+    @include max(480) {
+      width: 150px;
+    }
+  }
+  &::before {
+    left: 0;
+    background-image: url('../img/bg-left.svg');
+    background-position: 0 50%;
+  }
+  &::after {
+    right: 0;
+    background-image: url('../img/bg-right.svg');
+    background-position: 100% 50%;
+  }
+}

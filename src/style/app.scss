@@ -4,17 +4,14 @@
 @import 'core/mixins';
 @import 'core/base';
 
-//elements
-@import 'elements/burger';
-@import 'elements/breadcrumbs';
-//@import 'elements/pagination';
-//@import 'elements/popup';
-//@import 'elements/slickBase';
-
 //section
+@import 'sections/bg';
+@import 'sections/section-header';
 @import 'sections/header';
+@import 'sections/schedule';
+@import 'sections/info';
+@import 'sections/dress';
+@import 'sections/gallery';
+@import 'sections/video';
 @import 'sections/footer';
-
-//pages
-@import 'pages/index';
-@import 'pages/inner';
+@import 'sections/up';

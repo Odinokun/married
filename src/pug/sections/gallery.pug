@@ -1,0 +1,37 @@
+block variables-header
+  - var sectionSubtitle       = 'фото галерея'
+  - var sectionTitle = 'gallery'
+  - var className = 'gallery'
+  - var pic = 'title-gallery'
+
+mixin photo(pic)
+  .gallery-grid__item
+    a(data-fancybox="gallery" href="assets/img/gallery/" + pic + "-lg.JPG").gallery-grid__link
+      img(src="assets/img/gallery/" + pic + ".JPG" alt="picture").gallery-grid__img
+      .gallery-grid__zoom
+        +svg('zoom')
+
+//begin gallery
+#gallery.gallery.color-section(data-color='#ffffff')
+  include section-header
+  .container
+    .gallery-grid
+      +photo('01')
+      +photo('06')
+      +photo('10')
+      +photo('02')
+      +photo('11')
+      +photo('03')
+      +photo('07')
+      +photo('04')
+      +photo('08')
+      +photo('13')
+      +photo('14')
+      +photo('09')
+      +photo('05')
+      +photo('12')
+    .gallery__footer
+      a(href="gallery.rar").btn
+        +svg('download')
+        span скачать все фото
+//end gallery

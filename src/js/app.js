@@ -6,13 +6,16 @@ $(function() {
   // begin no-JS
   require('./modules/noJs')();
 
-  // begin Scroll2Ancor
-  // require('./modules/scroll2ancor')();
+  // begin change bg on scroll
+  require('./modules/change-bg')();
 
-  // begin Slick slider
-  // require('./modules/slick')();
+  // begin Gallery
+  require('./modules/masonry')();
 
-  // begin Popup
-  // require('./modules/popup')();
+  // begin scroll2ancor
+  require('./modules/scroll2ancor')();
+
+  // begin scroll up
+  require('./modules/scroll-up')();
 
 });

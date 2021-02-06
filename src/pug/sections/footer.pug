@@ -1,4 +1,28 @@
+block variables-header
+  - var sectionSubtitle       = 'организатор свадьбы'
+  - var sectionTitle = 'footer'
+  - var className = 'footer'
+  - var pic = 'title-footer'
+
 //begin footer
-footer.footer(style='background-color:#167;color:#fff;text-align:center;text-transform:uppercase;')
-  h1 footer
+#footer.footer.color-section(data-color='#ffffff')
+  include section-header
+  .container
+    .footer-contact
+      .footer-contact__name Ольга
+      a(href="tel:+380676316185").footer-contact__phone +38 067 631 61 85
+      .footer-contact__descr Если у вас есть любые вопросы
+      .footer-contact__social
+        a(href="viber://chat?number=+380676316185").footer-contact__social-link.footer-contact__social-link--viber.footer-contact__social-link--desktop
+          img(src="assets/img/viber.svg" alt="picture")
+        a(href="viber://add?number=380676316185").footer-contact__social-link.footer-contact__social-link--viber.footer-contact__social-link--mobile
+          img(src="assets/img/viber.svg" alt="picture")
+        a(href="https://wa.me/380676316185?text=").footer-contact__social-link.footer-contact__social-link--whatsapp
+          img(src="assets/img/whatsapp.svg" alt="picture")
+        a(href='tg://resolve?domain=OneLovestory').footer-contact__social-link.footer-contact__social-link--telegram
+          img(src="assets/img/telegram.svg" alt="picture")
+      .footer-contact__tooltip.footer-contact__tooltip--01 заказать цветы для молодожёнов
+      .footer-contact__tooltip.footer-contact__tooltip--02 хотите остаться на ночь
+      .footer-contact__tooltip.footer-contact__tooltip--03 трансфер
+      .footer-contact__tooltip.footer-contact__tooltip--04 подарки и сюрпризы
 //end footer

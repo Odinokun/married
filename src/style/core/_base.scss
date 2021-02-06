@@ -29,49 +29,18 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: $font-bold;
+h6,
+p {
   font-weight: 400;
   margin: 0 0 10px 0;
 }
 
-h1 {
-  @include responsive-font(34, 24);
-}
-
-h2 {
-  @include responsive-font(30, 22);
-}
-
-h3 {
-  @include responsive-font(28, 20);
-}
-
-h4 {
-  @include responsive-font(26, 18);
-}
-
-h5 {
-  @include responsive-font(24, 17);
-}
-
-h6 {
-  @include responsive-font(20, 16);
-}
-
-p {
-  margin: 0 0 10px 0;
-  strong {
-    font-family: $font-bold;
-  }
-}
-
 a {
-  transition: color $transition-hover;
-  text-decoration: none;
+  transition: all $transition;
+  text-decoration: underline;
   color: $link;
   &:hover {
-    color: $link-hov;
+    text-decoration: none;
   }
 }
 
@@ -106,83 +75,91 @@ button {
   outline: none;
 }
 
-input {
-  padding: 3px 10px 5px 10px;
-  color: $text;
-  border: 1px solid $text;
-
-  @include placeholder-color($text);
-}
-
-textarea {
-  resize: none;
-}
-
-input.error,
-textarea.error {
-  border-color: #ed1b24 !important;
-  background: #fbd1d3 !important;
-}
-
 svg {
   display: block;
   overflow: visible;
 }
 
-// подсвечиваем картинки без alt и без заполненного alt
-img[alt=''],
-img:not([alt]) {
-  outline: 5px solid tomato;
-}
-
-// исключение для google-map и fancybox
-.fancybox-container img[alt=''],
-.fancybox-container img:not([alt]),
-.gm-style img[alt=''],
-.gm-style img:not([alt]) {
-  outline: none !important;
-}
-
-// тревога, если первый child внутри списка не li и прочие похожие примеры
-ul > *:not(li),
-ol > *:not(li) {
-  outline: 5px solid tomato;
-}
-
-//изменяем цвет выделения текста мышью
-::selection {
-  // background-color: $brand;
-  // color: $brand;
-  // text-shadow: none;
-}
-
-.main-wrap {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+.main {
   min-height: 100vh;
-  //свойство для плавной прокрутки на яблоках
 
   -webkit-overflow-scrolling: touch;
-  @include max(1023) {
-    //свойство для исправления бага 100vh для мобильных
-    min-height: -moz-available;
-    min-height: -webkit-fill-available;
-    min-height: fill-available;
-  }
-  &.no-scroll {
-    overflow: hidden;
-  }
-}
-
-.main {
-  flex-grow: 1;
 }
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 60px;
+
+  @include max(680) {
+    padding: 0 30px;
+  }
+}
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  height: 54px;
+  padding-left: 50px;
+  text-decoration: none;
+  border: 2px solid #bf9475;
+
+  &:hover {
+    span {
+      color: #fff;
+    }
+    &::after {
+      opacity: 1;
+    }
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 2px;
+    height: 50px;
+    content: '';
+    transition: all $transition;
+    background-color: $brand;
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: calc(100% - 50px);
+    height: 50px;
+    content: '';
+    transition: all $transition;
+    opacity: 0;
+    background-color: $brand;
+  }
+  svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 16px;
+    fill: $brand;
+    width: 16px;
+    height: 16px;
+    margin: auto;
+    transition: all $transition;
+  }
+  span {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 14px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 23px;
+    transition: all $transition;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
 }

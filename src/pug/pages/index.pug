@@ -1,21 +1,26 @@
 extends ../_template
 
 block variables
-  - var title       = 'Index'
-  - var description = ''
-  - var ogtitle     = ''
-  - var ogimage     = ''
-
-  - var pageHeaderTitle = ''
-  - var breadcrumbs     = 'breadcrumbs link'
+  - var title       = 'Егор и Маша'
+  - var description = 'Егор и Маша'
+  - var ogtitle     = 'Егор и Маша'
+  - var ogimage     = 'assets/img/social.jpg'
 
 block content
-  .main-wrap.no-js
+  //include ../sections/bg
+  #bg.bg
+  .main.no-js
     include ../sections/header
-
-    //begin content
-    main.main.index
-    //end content
+    include ../sections/schedule
+    include ../sections/info
+    include ../sections/dress
+    include ../sections/gallery
+    include ../sections/video
 
     include ../sections/footer
+
+    #arr-up.arr-up
+      +svg('arr-up')
+      span вверх
+
     include ../sections/scripts
