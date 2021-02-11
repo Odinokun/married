@@ -39,6 +39,7 @@ a {
   transition: all $transition;
   text-decoration: underline;
   color: $link;
+
   &:hover {
     text-decoration: none;
   }
@@ -110,10 +111,12 @@ svg {
     span {
       color: #fff;
     }
+
     &::after {
       opacity: 1;
     }
   }
+
   &::before {
     position: absolute;
     top: 0;
@@ -124,6 +127,7 @@ svg {
     transition: all $transition;
     background-color: $brand;
   }
+
   &::after {
     position: absolute;
     top: 0;
@@ -135,6 +139,7 @@ svg {
     opacity: 0;
     background-color: $brand;
   }
+
   svg {
     position: absolute;
     top: 0;
@@ -146,6 +151,7 @@ svg {
     margin: auto;
     transition: all $transition;
   }
+
   span {
     font-size: 12px;
     font-weight: normal;

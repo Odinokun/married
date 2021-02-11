@@ -10,7 +10,8 @@ module.exports = function () {
       }, 1000);
     })
   });
-// при прокрутке окна (window)
+
+  // при прокрутке окна (window)
   $(window).scroll(function () {
     // если пользователь прокрутил страницу более чем на 200px
     if ($(this).scrollTop() > 300) {
